@@ -1,2 +1,2 @@
-# assign1
+# Old is Gold 
 Assignment one coding for BIT302
