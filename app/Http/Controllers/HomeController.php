@@ -25,4 +25,13 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    /**
+     * Registration function
+     * @return \Illuminate\Http\Response
+     */
+    public function register()
+    {
+        echo "for registration view";
+
+    }
 }
