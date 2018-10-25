@@ -1,4 +1,4 @@
 <?php 
 
-   echo "Hello world from ";
+   echo "Hello world from outside";
 ?>
