@@ -1,7 +1,57 @@
 .bg_login {
- /*background-color: #343a40 !important; */
- background-image:url('../img/image3.jpg');
+    /*background-color: #343a40 !important; */
+    background-image: url('../img/image3.jpg');
 }
-.old_transparent{
-    opacity: 0.7;
+
+.old_transparent {
+    opacity: 0.9;
+}
+
+/*
+ rating 
+*/
+.wrapper {
+    border: none;
+    font-size: 14px;
+    transform: translateX(-50%);
+}
+
+.wrapper input {
+    border: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0;
+}
+
+.wrapper label {
+    position: relative;
+    float: right;
+    color: #C8C8C8;
+}
+
+.wrapper label:before {
+    content: "\f005";
+    font-family: FontAwesome;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.wrapper input:checked~label:before {
+    color: #FFC107;
+}
+
+.wrapper label:hover~label:before {
+    color: #ffdb70;
+}
+
+.wrapper label:hover:before {
+    color: #FFC107;
 }
