@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OLD IS GOLD -A plateform for the old!</title></title>
+    <title>OLD IS GOLD -A plateform for the old!</title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,17 +23,23 @@
 
   </head>
 
-  <body class="bg_login">
+  <div class="bg_login">
 
     <div class="container">
       <div class="card card-login mx-auto mt-5 old_transparent">
-        <div class="card-header">Login</div>
+        <div class="card-header">{{ __('Login') }}</div>
         <div class="card-body">
-          <form>
+          <form method="POST" action="{{ route('login') }}">
             <div class="form-group">
               <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
                 <label for="inputEmail">Username</label>
+                
+                @if ($errors->has('email'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+            @endif
               </div>
             </div>
             <div class="form-group">
@@ -50,7 +56,9 @@
                 </label>
               </div>
             </div>
-            <a class="btn btn-primary btn-block" href="index.html">Login</a>
+            <button type="submit" class="btn btn-primary btn-block">
+              {{ __('Login') }}
+          </button>
           </form>
           <div class="text-center">
             <a class="d-block small mt-3" href="register.html">Register an Account</a>
@@ -61,12 +69,12 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    {{-- <script src="vendor/jquery/jquery.min.js"></script> --}}
+    {{-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    {{-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> --}}
 
-  </body>
+  </div>
 
 </html>
