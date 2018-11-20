@@ -34,8 +34,8 @@ class ExampleTest extends TestCase
     public function testHome()
     {
         $response = $this->get('/home');
+        $response->assertStatus(200);
 
-        $response->assertStatus(302);
     }
     public function testLogout()
     {
@@ -44,6 +44,7 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(405);
     }
+
     public function testRequestserviceview()
     {
         //requestview link
@@ -80,5 +81,3 @@ class ExampleTest extends TestCase
         $response->assertStatus(302);
     }
 }
-
-

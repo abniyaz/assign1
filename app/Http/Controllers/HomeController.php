@@ -168,4 +168,13 @@ class HomeController extends Controller
         ->update(['accept_by' => $userId,'status' => 2]);
         return redirect("/acceptrequest")->with('success', 'Your Request has been accepted successfully!');
     }
+    /**
+     * Registration function
+     * @return \Illuminate\Http\Response
+     */
+    public function register()
+    {
+        echo "for registration view";
+
+    }
 }
